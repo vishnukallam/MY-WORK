@@ -1,7 +1,7 @@
 import java.util.Scanner;
-public class ifclass {
+public class Armstrong {
     public static void main(String[] args) {
-        int i = 0,n,temp, sum=0;
+        int n,temp, sum=0;
         Scanner s = new Scanner(System.in);
        System.out.println("enter the value of n : ");
        n = s.nextInt();
@@ -10,9 +10,10 @@ public class ifclass {
        temp = n;
        while (temp!=0){
            int rem = temp%10;
-           sum += Math.pow(rem,len);
+           sum += (double)Math.pow(rem,len);
            temp /= 10;
        }
+        System.out.println(sum);
        if (sum == n){
            System.out.println("The given number "+ n + " is an armstrong number.");
        }
